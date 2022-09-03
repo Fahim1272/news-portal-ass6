@@ -1,0 +1,19 @@
+/* Authorpic */
+.writerProfilePIc{
+    width: 70px;
+    border-radius: 50%;
+}
+/* News Card Design ---------------*/
+.catagories{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.categoryItem{
+    padding: 10px;
+    border: none;
+    background-color: rgb(245, 238, 238);
+    transition: all 0.2s ease-in-out;
+    font-weight: 600;
+    border-radius: 5px;
+}
