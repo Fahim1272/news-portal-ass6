@@ -89,3 +89,17 @@ const newsShow = data =>{
     })
     }   
 }
+const showDetails = async data => {
+    // console.log(data);
+    try{
+        const url = `https://openapi.programming-hero.com/api/news/${data}`;
+        const res =  await fetch(url);
+        const det = await res.json();
+        showNewsDetails(det.data[0]);
+    }
+    catch(errorMessage){
+        console.log(errorMessage);
+    }
+    
+
+}

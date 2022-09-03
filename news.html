@@ -40,3 +40,44 @@
         </section>
         <hr>
     </header>
+    <main class="container">
+        <div id="category" class="catagories">
+
+        </div>
+        <div id="newCount" class="totalNews bg-warning p-3 mb-3 text-center bg-white d-none mt-5 rounded-3">
+            <h4><span id="counter">0</span> News Found</h4>
+        </div>
+
+        <div id="errorMessage" class="text-center text-danger bg-white p-3 d-none mt-5 rounded-3">
+            <h4>Sorry! No new items found</h4>
+        </div>
+        <div id="LoadSpinners" class="d-flex justify-content-center d-none">
+            <div class="LoadSpinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div class="mt-3" id="news">
+
+        </div>
+        <section class="newsDetails">
+
+            <!-- Modal -->
+            <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="newsModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="detailsModal" class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Finished</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>

@@ -44,9 +44,6 @@ hr{
     .profilePic{
         width: 25px;
     }
-    .questionHolder{
-        grid-template-columns: repeat(1,1fr);
-    }
     .writerProfilePIc{
         width: 30px;
     }
