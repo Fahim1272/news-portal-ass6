@@ -131,3 +131,5 @@ const showNewsData = (data) => {
     })
     
 }
+loadnewsData();
+showNews('03')
