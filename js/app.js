@@ -103,3 +103,18 @@ const showDetails = async data => {
     
 
 }
+const showNewsDetails = (data) =>{
+    console.log(data);
+    const modaltitle = document.getElementById('newsModalLabel');
+    modaltitle.innerText = data.title;
+    const modalShow = document.getElementById('detailsModal');
+    modalShow.innerHTML = `
+        <div>
+            <img class="img-fluid" src="${data.image_url}" alt="" />
+            <br />
+            <p>${data.details}</p>
+            <p> Author : ${data.author.name ? data.author.name : "No data"}</p>
+        </div>
+        
+    `
+}
