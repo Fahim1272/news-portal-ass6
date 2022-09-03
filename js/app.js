@@ -118,3 +118,16 @@ const showNewsDetails = (data) =>{
         
     `
 }
+const showNewsData = (data) => {
+    console.log(data)
+    const catagories = document.getElementById('category');
+    data.forEach(category => {
+        const catagoryContent = document.createElement('button');
+        catagoryContent.classList.add('categoryItem')
+        catagoryContent.setAttribute("onclick", `showNews('${category.category_id}');`)
+        catagoryContent.innerText = category.category_name;
+        // console.log(catagoryContent);
+        catagories.appendChild(catagoryContent);
+    })
+    
+}
