@@ -1,3 +1,4 @@
+
 const loadnewsData = async () => {
     try{
         const url = `https://openapi.programming-hero.com/api/news/categories`
@@ -9,6 +10,21 @@ const loadnewsData = async () => {
         console.log(errorMessage);
     }
 
+}
+
+//  Showing News in a category----------
+const showNewsData = (data) => {
+    console.log(data)
+    const catagories = document.getElementById('category');
+    data.forEach(category => {
+        const catagoryContent = document.createElement('button');
+        catagoryContent.classList.add('categoryItem')
+        catagoryContent.setAttribute("onclick", `showNews('${category.category_id}');`)
+        catagoryContent.innerText = category.category_name;
+        // console.log(catagoryContent);
+        catagories.appendChild(catagoryContent);
+    })
+    
 }
 const showNews = async idCategory =>{
     // Spinner start
@@ -25,6 +41,8 @@ const showNews = async idCategory =>{
     }
     
 }
+
+// Showing available News in a category---------- 
 const newsShow = data =>{
    
     const errorMessageNews = document.getElementById('errorMessage');
@@ -89,6 +107,8 @@ const newsShow = data =>{
     })
     }   
 }
+
+// Showing Details of A news In a Modal---------
 const showDetails = async data => {
     // console.log(data);
     try{
@@ -118,18 +138,6 @@ const showNewsDetails = (data) =>{
         
     `
 }
-const showNewsData = (data) => {
-    console.log(data)
-    const catagories = document.getElementById('category');
-    data.forEach(category => {
-        const catagoryContent = document.createElement('button');
-        catagoryContent.classList.add('categoryItem')
-        catagoryContent.setAttribute("onclick", `showNews('${category.category_id}');`)
-        catagoryContent.innerText = category.category_name;
-        // console.log(catagoryContent);
-        catagories.appendChild(catagoryContent);
-    })
-    
-}
+
 loadnewsData();
 showNews('03')
