@@ -91,7 +91,7 @@ const newsShow = data =>{
                                 <h4 class="ms-2">${newsElements.total_view ? newsElements.total_view : "no data"}</h4>
                             </div>
                             <div>
-                                <button onclick="showDetails('${newsElements._id}');" style="font-size: 24px; color: blue" class="btn btn-primary text-light p-1" data-bs-toggle="modal" data-bs-target="#newsModal">Read...</button>
+                                <button onclick="showDetails('${newsElements._id}');" style="font-size: 15px;" class="btn bg-secondary  text-light p-1" data-bs-toggle="modal" data-bs-target="#newsModal">More</button>
                                 
                             </div>
                         </div>
